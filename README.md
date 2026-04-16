@@ -31,29 +31,9 @@ docker compose version
 
 ## 1. Fork The Repository
 
-1. Open this repository on GitHub.
-2. Click **Fork**.
-3. Create the fork in your own GitHub account.
-
 ## 2. Clone Your Fork
 
-Replace `YOUR_GITHUB_USERNAME` and `YOUR_REPOSITORY_NAME` with your values:
-
-```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git
-cd YOUR_REPOSITORY_NAME
-```
-
-If you use SSH:
-
-```bash
-git clone git@github.com:YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git
-cd YOUR_REPOSITORY_NAME
-```
-
 ## 3. Install Dependencies
-
-This project uses `pnpm`.
 
 ```bash
 pnpm install
@@ -68,22 +48,6 @@ macOS/Linux:
 ```bash
 cp .env.example .env
 ```
-
-PowerShell:
-
-```powershell
-Copy-Item .env.example .env
-```
-
-Command Prompt:
-
-```cmd
-copy .env.example .env
-```
-
-Then update `.env` with your local values.
-
-Example:
 
 ```env
 # Database configuration
@@ -132,14 +96,8 @@ docker compose down
 After the database is running, apply the Prisma schema and auth tables:
 
 ```bash
-pnpm prisma db push
-pnpm run auth:migrate
-```
-
-If you want to inspect the database in a UI:
-
-```bash
-pnpm run db:studio
+pnpm prisma migrate dev --name init
+pnpm prisma generate
 ```
 
 ## 7. Run The App
@@ -151,63 +109,3 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
-
-## One-Time Setup Summary
-
-If you prefer the short version, the full setup flow is:
-
-```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git
-cd YOUR_REPOSITORY_NAME
-pnpm install
-cp .env.example .env
-# edit .env
-docker compose up -d
-pnpm prisma db push
-pnpm run auth:migrate
-pnpm dev
-```
-
-On Windows, replace the `cp` step with `Copy-Item .env.example .env` in PowerShell or `copy .env.example .env` in Command Prompt.
-
-## Available Scripts
-
-```bash
-pnpm dev          # start Next.js in development
-pnpm build        # production build
-pnpm start        # run the production build
-pnpm lint         # run ESLint
-pnpm format       # run Prettier
-pnpm run db:up    # start the database container
-pnpm run db:down  # stop the database container
-pnpm run db:push  # push the Prisma schema to the database
-pnpm run db:studio
-pnpm run auth:migrate
-```
-
-## Troubleshooting
-
-### Port 5432 is already in use
-
-Change `DB_PORT` in `.env` to a free port, then restart the database:
-
-```bash
-docker compose down
-docker compose up -d
-```
-
-### The app fails because environment variables are missing
-
-Make sure `.env` exists and every field from `.env.example` has a value.
-
-### `pnpm run db:up` does not work on your machine
-
-The package script uses `docker-compose`. If your Docker setup only supports `docker compose`, run this directly instead:
-
-```bash
-docker compose up -d
-```
-
-### The bundled `setup` script does not work on Windows
-
-The `setup` script uses `cp`, which works in macOS, Linux, and Git Bash, but not in a default Windows shell. Use the step-by-step commands from this README instead.
