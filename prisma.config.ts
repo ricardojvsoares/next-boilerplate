@@ -1,9 +1,6 @@
 import 'dotenv/config';
 import { defineConfig } from 'prisma/config';
-
-const DATABASE_URL =
-  `postgresql://${process.env.DB_USER}:${process.env.DB_PASSWORD}` +
-  `@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}?schema=public`;
+import { DATABASE_URL } from '@/lib/env';
 
 export default defineConfig({
   schema: 'prisma/schema.prisma',
