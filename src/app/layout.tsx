@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
+import { NextIntlClientProvider } from 'next-intl';
 
 const interHeading = Inter({ subsets: ['latin'], variable: '--font-heading' });
 
@@ -36,7 +37,9 @@ export default function RootLayout({
         interHeading.variable
       )}
     >
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+      </body>
     </html>
   );
 }
