@@ -4,11 +4,15 @@ This repository is a starter for a Next.js app with these pieces already wired i
 
 - Next.js 16 with the App Router
 - TypeScript
-- Prisma + PostgreSQL
+- Prisma
 - Better Auth
 - next-intl
 - Tailwind CSS
 - ESLint + Prettier + Husky
+- Shadcn UI components
+- Docker Compose setup for PostgreSQL
+- Login and registration pages
+- Project structure with clear separation of concerns
 
 ## Prerequisites
 
@@ -29,9 +33,18 @@ docker --version
 docker compose version
 ```
 
-## 1. Fork The Repository
+<hr>
 
-## 2. Clone Your Fork
+# Getting Started
+
+## 1. Click the "Use this template" button to create your own copy.
+
+## 2. Clone Your Remote Repository
+
+```bash
+git clone <your-repo-url>
+cd <your-repo-name>
+```
 
 ## 3. Install Dependencies
 
@@ -42,8 +55,6 @@ pnpm install
 ## 4. Create Your Environment File
 
 Create a `.env` file from `.env.example`.
-
-macOS/Linux:
 
 ```bash
 cp .env.example .env
@@ -63,16 +74,24 @@ node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 
 ## 5. Start PostgreSQL
 
-This project includes a Docker Compose file for PostgreSQL.
-
 ```bash
-docker compose up -d
+# To start the database:
+pnpm db:up
 ```
 
-To stop the database later:
+```bash
+# To stop the database:
+pnpm db:down
+```
 
 ```bash
-docker compose down
+# To stop the database and remove all data:
+pnpm db:nuke
+```
+
+```bash
+# To view database logs:
+pnpm db:logs
 ```
 
 ## 6. Initialize The Database
@@ -91,5 +110,3 @@ Start the development server:
 ```bash
 pnpm dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000).

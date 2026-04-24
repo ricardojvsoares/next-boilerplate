@@ -10,12 +10,13 @@
     "format": "prettier --write .",
     "prepare": "husky",
     "lint-staged": "lint-staged",
-    "db:up": "docker-compose up -d",
-    "db:down": "docker-compose down",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:nuke": "docker compose down -v",
+    "db:logs": "docker compose logs -f",
     "db:push": "prisma db push",
     "db:studio": "prisma studio",
-    "auth:migrate": "better-auth migrate",
-    "setup": "pnpm install && cp .env.example .env && pnpm run db:up && pnpm run db:push && pnpm run auth:migrate"
+    "auth:migrate": "better-auth migrate"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.0",
