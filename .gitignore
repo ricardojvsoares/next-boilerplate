@@ -47,3 +47,6 @@ pnpm-workspace.yaml
 /src/generated/prisma
 
 .vscode/*
+
+# Logs (can be committed if needed, but often not desired)
+/logs/*
