@@ -49,26 +49,10 @@ macOS/Linux:
 cp .env.example .env
 ```
 
-```env
-# Database configuration
-DB_USER=postgres
-DB_PASSWORD=postgres123
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=next_boilerplate
-
-# Better Auth configuration
-BETTER_AUTH_SECRET=replace-this-with-a-long-random-secret
-BETTER_AUTH_URL=http://localhost:3000
-
-# App State
-NODE_ENV=development
-```
-
 Notes:
 
 - `BETTER_AUTH_URL` should be `http://localhost:3000` for local development.
-- `BETTER_AUTH_SECRET` must be at least 16 characters long.
+- `BETTER_AUTH_SECRET` must be at least 32 characters long.
 - The database values in `.env` are also used by `compose.yaml` to boot the PostgreSQL container.
 
 If you want to generate a secret with Node.js:
