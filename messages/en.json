@@ -1,49 +1,59 @@
 {
+  "Breadcrumb": {
+    "breadcrumb": "Breadcrumb",
+    "components": "Components",
+    "home": "Home"
+  },
   "Common": {
+    "and": "and",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
     "email": "Email",
     "password": "Password",
-    "confirm": "Confirm",
-    "submit": "Submit",
-    "cancel": "Cancel",
-    "required": "This field is required",
-    "termsAndPrivacy": "By clicking continue, you agree to our",
-    "terms": "Terms of Service",
     "privacy": "Privacy Policy",
-    "and": "and"
+    "required": "This field is required",
+    "submit": "Submit",
+    "terms": "Terms of Service",
+    "termsAndPrivacy": "By clicking continue, you agree to our"
   },
-
+  "Dashboard": {
+    "new": "New",
+    "title": "Dashboard",
+    "welcome": "Welcome to your dashboard!",
+    "welcomeMessage": "This is where you can manage your account and view your data."
+  },
   "HomePage": {
     "title": "Hello world!"
   },
-  "SignUp": {
-    "title": "Sign Up",
-    "createAccount": "Create your account",
-    "continueWith": "Or continue with",
-    "signUpWithGoogle": "Sign up with Google",
-    "alreadyHaveAccount": "Already have an account?",
-    "signIn": "Sign in",
-    "passwordRequirements": "Password requirements",
-    "minimumLength": "At least {length} characters",
-    "mustContainLowerCase": "Contains at least one lowercase letter",
-    "mustContainUpperCase": "Contains at least one uppercase letter",
-    "mustContainNumber": "Contains at least one number",
-    "mustContainSymbol": "Contains at least one special character",
-    "validationUpdates": "Validation updates as you type.",
-    "welcomeMessage": "Welcome {name}! Your account has been created successfully.",
-    "unexpectedError": "An unexpected error occurred. Please try again."
-  },
   "SignIn": {
-    "title": "Sign In",
-    "welcomeBack": "Welcome back",
+    "continueWith": "Or continue with",
+    "dontHaveAccount": "Don't have an account?",
+    "forgotPassword": "Forgot your password?",
+    "invalidUser": "Invalid email or password",
     "login": "Login to your account",
     "loginButton": "Login",
-    "continueWith": "Or continue with",
+    "loginSuccess": "Login successful! Welcome back.",
     "signInWithGoogle": "Sign in with Google",
-    "forgotPassword": "Forgot your password?",
-    "dontHaveAccount": "Don't have an account?",
     "signUp": "Sign up",
-    "invalidUser": "Invalid email or password",
+    "title": "Sign In",
     "unexpectedError": "An unexpected error occurred. Please try again.",
-    "loginSuccess": "Login successful! Welcome back."
+    "welcomeBack": "Welcome back"
+  },
+  "SignUp": {
+    "alreadyHaveAccount": "Already have an account?",
+    "continueWith": "Or continue with",
+    "createAccount": "Create your account",
+    "minimumLength": "At least {length} characters",
+    "mustContainLowerCase": "Contains at least one lowercase letter",
+    "mustContainNumber": "Contains at least one number",
+    "mustContainSymbol": "Contains at least one special character",
+    "mustContainUpperCase": "Contains at least one uppercase letter",
+    "passwordRequirements": "Password requirements",
+    "signIn": "Sign in",
+    "signUpWithGoogle": "Sign up with Google",
+    "title": "Sign Up",
+    "unexpectedError": "An unexpected error occurred. Please try again.",
+    "validationUpdates": "Validation updates as you type.",
+    "welcomeMessage": "Welcome {name}! Your account has been created successfully."
   }
 }
