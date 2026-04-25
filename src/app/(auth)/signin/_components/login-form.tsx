@@ -12,7 +12,7 @@ import { PasswordInput } from '@/components/ui/password-input';
 import { Input } from '@/components/ui/input';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { SignInValues } from '@/types/signin';
+import { SignInValues } from '@/schemas/signin';
 import { UseFormReturn } from 'react-hook-form';
 
 export function LoginForm({

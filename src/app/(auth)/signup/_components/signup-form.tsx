@@ -12,7 +12,7 @@ import { PasswordRequirements } from './password-requirements';
 import { Input } from '@/components/ui/input';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { SignUpValues } from '@/types/signup';
+import { SignUpValues } from '@/schemas/signup';
 import { UseFormReturn } from 'react-hook-form';
 import { PasswordInput } from '@/components/ui/password-input';
 import { useEffect, useState } from 'react';
