@@ -12,6 +12,7 @@ This repository is a starter for a Next.js app with these pieces already wired i
 - Shadcn UI components
 - Docker Compose setup for PostgreSQL
 - Login and registration pages
+- t3-oss environment variable validation
 - Project structure with clear separation of concerns
 
 ## Prerequisites
