@@ -71,5 +71,4 @@ function createLogger(prefix?: string) {
   };
 }
 
-export const logger = createLogger();
-export { createLogger };
+export const logger = (prefix?: string) => createLogger(prefix);
