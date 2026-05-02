@@ -13,12 +13,12 @@ import React from 'react';
 
 /**
  * - If href is provided, it will be a link, otherwise it will be a page
- * - If dinamic is provided, it will be used as the text instead of the translation key of value
+ * - If dinamic is true, it will not be translated, otherwise it will be translated using the value as key
  */
 export type BreadCrumbItems = {
   value: string;
   href?: string;
-  dinamic?: string;
+  dinamic?: boolean;
 }[];
 
 export function BreadCrumb({ items }: { items: BreadCrumbItems }) {
@@ -38,7 +38,7 @@ export function BreadCrumb({ items }: { items: BreadCrumbItems }) {
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
                   {item.dinamic ? (
-                    <Link href={item.href}>{item.dinamic}</Link>
+                    <Link href={item.href}>{item.value}</Link>
                   ) : (
                     <Link href={item.href}>{t(item.value)}</Link>
                   )}
@@ -47,7 +47,7 @@ export function BreadCrumb({ items }: { items: BreadCrumbItems }) {
             ) : (
               <BreadcrumbItem>
                 {item.dinamic ? (
-                  <BreadcrumbPage>{item.dinamic}</BreadcrumbPage>
+                  <BreadcrumbPage>{item.value}</BreadcrumbPage>
                 ) : (
                   <BreadcrumbPage>{t(item.value)}</BreadcrumbPage>
                 )}
