@@ -2,7 +2,8 @@
   "Breadcrumb": {
     "breadcrumb": "Breadcrumb",
     "components": "Components",
-    "home": "Home"
+    "home": "Home",
+    "dashboard": "Dashboard"
   },
   "Common": {
     "and": "and",
@@ -23,7 +24,11 @@
     "welcomeMessage": "This is where you can manage your account and view your data."
   },
   "HomePage": {
-    "title": "Hello world!"
+    "title": "Hello world!",
+    "signIn": "Sign in ",
+    "signUp": "Sign up",
+    "home": "Home",
+    "dashboard": "Dashboard"
   },
   "SignIn": {
     "continueWith": "Or continue with",
