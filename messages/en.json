@@ -25,7 +25,7 @@
   },
   "HomePage": {
     "title": "Hello world!",
-    "signIn": "Sign in ",
+    "signIn": "Sign in",
     "signUp": "Sign up",
     "home": "Home",
     "dashboard": "Dashboard"
