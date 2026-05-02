@@ -65,5 +65,10 @@
     "title": "Something went wrong!",
     "description": "An unexpected error occurred.",
     "retry": "Try again"
+  },
+  "NotFound": {
+    "title": "Page Not Found",
+    "message": "The page you are looking for doesn't exist or has been moved.",
+    "returnHome": "Return Home"
   }
 }
