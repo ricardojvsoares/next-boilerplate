@@ -24,7 +24,7 @@ export default function DashboardPage() {
     <Page>
       <BreadCrumb items={navigationData} />
       <PageHeader>
-        <div className="display:block flex items-center gap-2">
+        <div className="flex items-center gap-2">
           <PageIcon icon={Home} />
           <PageTitle>{t('title')}</PageTitle>
         </div>
