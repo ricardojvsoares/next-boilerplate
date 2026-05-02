@@ -60,5 +60,10 @@
     "unexpectedError": "An unexpected error occurred. Please try again.",
     "validationUpdates": "Validation updates as you type.",
     "welcomeMessage": "Welcome {name}! Your account has been created successfully."
+  },
+  "Error": {
+    "title": "Something went wrong!",
+    "description": "An unexpected error occurred.",
+    "retry": "Try again"
   }
 }
