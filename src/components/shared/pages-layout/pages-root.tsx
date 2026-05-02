@@ -11,7 +11,7 @@ interface PagesRootProps {
   children: React.ReactNode;
 }
 
-function PagesRoot({ className, children }: Readonly<PagesRootProps>) {
+function Page({ className, children }: Readonly<PagesRootProps>) {
   return (
     <div className={cn('flex w-full flex-1 flex-col gap-4', className)}>
       <div className="flex flex-1 flex-col gap-6 p-6">{children}</div>
@@ -19,13 +19,13 @@ function PagesRoot({ className, children }: Readonly<PagesRootProps>) {
   );
 }
 
-PagesRoot.Header = PageHeader;
-PagesRoot.Icon = PageIcon;
-PagesRoot.Title = PageTitle;
-PagesRoot.Actions = PageActions;
-PagesRoot.Content = PageContent;
+Page.Header = PageHeader;
+Page.Icon = PageIcon;
+Page.Title = PageTitle;
+Page.Actions = PageActions;
+Page.Content = PageContent;
 
-export { PagesRoot };
+export { Page };
 export { PageHeader } from './pages-header';
 export { PageIcon } from './pages-icon';
 export { PageTitle } from './pages-title';

@@ -1,6 +1,13 @@
-import { getTranslations } from 'next-intl/server';
+import Home from './_components/home-page';
+import Navbar from './_components/nav';
 
 export default async function HomePage() {
-  const t = await getTranslations('HomePage');
-  return <h1>{t('title')}</h1>;
+  return (
+    <div>
+      <div className="h-30">
+        <Navbar />
+      </div>
+      <Home />
+    </div>
+  );
 }
