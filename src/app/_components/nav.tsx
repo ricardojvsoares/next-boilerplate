@@ -1,3 +1,5 @@
+'use client';
+
 import { MenuIcon } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -58,17 +60,17 @@ export default function Navbar() {
             <DropdownMenuContent className="w-56" align="end">
               <DropdownMenuGroup>
                 {navigationData.map((item, index) => (
-                  <DropdownMenuItem key={index}>
-                    <Link href={item.href}>{t(item.title)}</Link>
-                  </DropdownMenuItem>
+                  <Link href={item.href} key={index}>
+                    <DropdownMenuItem>{t(item.title)}</DropdownMenuItem>
+                  </Link>
                 ))}
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>
-                  <Link href="/signup">{t('signUp')}</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link href="/signin">{t('signIn')}</Link>
-                </DropdownMenuItem>
+                <Link href="/signup">
+                  <DropdownMenuItem>{t('signUp')}</DropdownMenuItem>
+                </Link>
+                <Link href="/signin">
+                  <DropdownMenuItem>{t('signIn')}</DropdownMenuItem>
+                </Link>
               </DropdownMenuGroup>
             </DropdownMenuContent>
           </DropdownMenu>

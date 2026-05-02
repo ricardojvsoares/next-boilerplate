@@ -31,7 +31,7 @@ function writeToFile(line: string) {
 
 function createLogger(prefix?: string) {
   const minLevel = LEVELS[getMinLevel()];
-  const tag = prefix ? `[${prefix}]` : '';
+  const tag = prefix ? ` [${prefix}]` : '';
 
   function format(level: string, args: unknown[]): string {
     const ts = new Date().toISOString();
@@ -71,5 +71,4 @@ function createLogger(prefix?: string) {
   };
 }
 
-export const logger = createLogger();
-export { createLogger };
+export const logger = (prefix?: string) => createLogger(prefix);
