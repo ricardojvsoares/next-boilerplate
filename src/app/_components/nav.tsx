@@ -59,15 +59,15 @@ export default function Navbar() {
               <DropdownMenuGroup>
                 {navigationData.map((item, index) => (
                   <DropdownMenuItem key={index}>
-                    <a href={item.href}>{t(item.title)}</a>
+                    <Link href={item.href}>{t(item.title)}</Link>
                   </DropdownMenuItem>
                 ))}
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>
-                  <a href="/signup">{t('signUp')}</a>
+                  <Link href="/signup">{t('signUp')}</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <a href="/signin">{t('signIn')}</a>
+                  <Link href="/signin">{t('signIn')}</Link>
                 </DropdownMenuItem>
               </DropdownMenuGroup>
             </DropdownMenuContent>

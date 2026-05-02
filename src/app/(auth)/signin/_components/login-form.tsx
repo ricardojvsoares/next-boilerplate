@@ -14,6 +14,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { SignInValues } from '@/schemas/signin';
 import { UseFormReturn } from 'react-hook-form';
+import Link from 'next/link';
 
 export function LoginForm({
   form,
@@ -50,9 +51,9 @@ export function LoginForm({
               <Field>
                 <div className="flex items-center">
                   <FieldLabel htmlFor="password">{ct('password')}</FieldLabel>
-                  <a href="#" className="ml-auto text-sm underline-offset-2 hover:underline">
+                  <Link href="#" className="ml-auto text-sm underline-offset-2 hover:underline">
                     {t('forgotPassword')}
-                  </a>
+                  </Link>
                 </div>
                 <PasswordInput id="password" required {...form.register('password')} />
               </Field>
@@ -68,7 +69,7 @@ export function LoginForm({
                 </Button>
               </Field>
               <FieldDescription className="text-center">
-                {t('dontHaveAccount')} <a href="/signup">{t('signUp')}</a>
+                {t('dontHaveAccount')} <Link href="/signup">{t('signUp')}</Link>
               </FieldDescription>
             </FieldGroup>
           </form>
@@ -86,8 +87,8 @@ export function LoginForm({
         </CardContent>
       </Card>
       <FieldDescription className="px-6 text-center">
-        {ct('termsAndPrivacy')} <a href="#">{ct('terms')}</a> {ct('and')}{' '}
-        <a href="#">{ct('privacy')}</a>.
+        {ct('termsAndPrivacy')} <Link href="#">{ct('terms')}</Link> {ct('and')}{' '}
+        <Link href="#">{ct('privacy')}</Link>.
       </FieldDescription>
     </div>
   );

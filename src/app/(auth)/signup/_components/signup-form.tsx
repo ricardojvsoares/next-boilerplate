@@ -16,6 +16,7 @@ import { SignUpValues } from '@/schemas/signup';
 import { UseFormReturn } from 'react-hook-form';
 import { PasswordInput } from '@/components/ui/password-input';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export function SignupForm({
   form,
@@ -83,7 +84,7 @@ export function SignupForm({
                 </Button>
               </Field>
               <FieldDescription className="text-center">
-                {t('alreadyHaveAccount')} <a href="/signin">{t('signIn')}</a>
+                {t('alreadyHaveAccount')} <Link href="/signin">{t('signIn')}</Link>
               </FieldDescription>
             </FieldGroup>
           </form>
@@ -101,8 +102,8 @@ export function SignupForm({
         </CardContent>
       </Card>
       <FieldDescription className="px-6 text-center">
-        {ct('termsAndPrivacy')} <a href="#">{ct('terms')}</a> {ct('and')}{' '}
-        <a href="#">{ct('privacy')}</a>.
+        {ct('termsAndPrivacy')} <Link href="#">{ct('terms')}</Link> {ct('and')}{' '}
+        <Link href="#">{ct('privacy')}</Link>.
       </FieldDescription>
     </div>
   );
