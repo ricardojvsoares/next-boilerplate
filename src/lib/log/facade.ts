@@ -1,4 +1,4 @@
-import { logToServer } from './server-actions';
+import { logToServer } from './serverActions';
 
 type LogLevel = 'info' | 'warn' | 'debug' | 'error';
 type LogFn = (msg: string) => void;

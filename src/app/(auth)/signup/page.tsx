@@ -3,7 +3,7 @@
 import { SignupForm } from './_components/signup-form';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
-import { signUp } from '@/lib/auth-client';
+import { signUp } from '@/lib/authClient';
 import { SignUpSchema, SignUpValues } from '@/schemas/signup';
 import { toast } from 'sonner';
 import { useTranslations } from 'next-intl';

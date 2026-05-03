@@ -3,7 +3,7 @@
 import { LoginForm } from './_components/login-form';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
-import { signIn } from '@/lib/auth-client';
+import { signIn } from '@/lib/authClient';
 import { SignInValues } from '@/schemas/signin';
 import { toast } from 'sonner';
 
